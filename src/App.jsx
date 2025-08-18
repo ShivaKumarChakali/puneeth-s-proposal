@@ -90,7 +90,7 @@ function App() {
               ease: "linear"
             }}
           >
-            {['💖', '💕', '💗', '💓', '💝', '💞', '💟', '💜', '🌸', '🌺', '🌷', '🌹', '✨', '💫', '⭐', '🌟'][Math.floor(Math.random() * 16)]}
+                         {['💖', '💕', '💗', '💓', '💝', '💞', '💟', '💜', '🌸', '🌺', '🌷', '🌹', '✨', '💫', '⭐', '🌟', '🎀', '💋', '😘'][Math.floor(Math.random() * 19)]}
           </motion.div>
         ))}
       </div>
@@ -155,7 +155,7 @@ function App() {
                 }}
                 className="text-6xl md:text-8xl text-center mb-8"
               >
-                💌
+                💌🎀
               </motion.div>
               
               <motion.h1
@@ -164,10 +164,10 @@ function App() {
                 transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
                 className="text-3xl md:text-4xl font-bold text-pink-600 mb-6 text-center"
               >
-                A Surprise Letter💕
+                🎀 A Surprise Letter 💕
               </motion.h1>
               
-              <motion.div
+              {/* <motion.div
                 className="text-xl md:text-2xl text-gray-700 leading-relaxed text-center font-semibold"
                 style={{ minHeight: "4rem" }}
               >
@@ -177,7 +177,7 @@ function App() {
                   transition={{ duration: 0.5, repeat: Infinity }}
                   className="inline-block w-2 h-8 bg-pink-500 ml-2"
                 />
-              </motion.div>
+              </motion.div> */}
               
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -185,7 +185,7 @@ function App() {
                 transition={{ delay: 1, type: "spring", stiffness: 100 }}
                 className="text-center mt-8 text-pink-500 text-lg font-semibold"
               >
-                💖 With all my love 💖
+                💖 With all my love 💕😘💋
               </motion.div>
             </motion.div>
             
@@ -219,7 +219,7 @@ function App() {
       </AnimatePresence>
       
       <AnimatePresence mode="wait">
-        {showProposal && (
+        {showProposal && !showCelebration && (
           <motion.div
             key="proposal"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -234,7 +234,7 @@ function App() {
               transition={{ delay: 0.2 }}
               className="text-4xl md:text-6xl font-bold text-pink-600 mb-8 drop-shadow-lg text-center"
             >
-              💕 Will you marry me? 💕
+              🎀 Will you always be mine Ammu? 💕
             </motion.h1>
             
             <motion.div
@@ -243,7 +243,7 @@ function App() {
               transition={{ delay: 0.3 }}
               className="text-2xl md:text-3xl text-pink-500 mb-8 font-semibold text-center"
             >
-              💖 Pretty please? 💖
+              🌷 Pretty please? 😘
             </motion.div>
             
             <motion.div
@@ -264,7 +264,7 @@ function App() {
                 transition={{ duration: 0.3, ease: "easeOut" }}
                 className="bg-gradient-to-r from-pink-400 via-pink-500 to-purple-500 hover:from-pink-500 hover:via-purple-500 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-full text-xl md:text-2xl shadow-lg border-2 border-pink-300 hover:border-pink-200"
               >
-                💖 Yes, I will! 💖
+                💕 Yes, I will! 💋
               </motion.button>
               
               {noClicks < 9 && (
@@ -280,7 +280,7 @@ function App() {
                   transition={{ duration: 0.3, ease: "easeOut" }}
                   className="bg-gradient-to-r from-rose-300 to-rose-500 hover:from-rose-400 hover:to-rose-600 text-white font-bold py-4 px-8 rounded-full text-xl md:text-2xl shadow-lg border-2 border-rose-200 hover:border-rose-100"
                 >
-                  😢 No, not yet 😢
+                  😢 No, not yet 🌷
                 </motion.button>
               )}
             </motion.div>
@@ -303,17 +303,17 @@ function App() {
                   }}
                   className="text-pink-600 text-lg font-semibold mb-2"
                 >
-                  💕 Are you sure? 💕
+                  🎀 Are you sure? 💕
                 </motion.p>
-                <p className="text-pink-500 text-base">
-                  The "Yes" button is getting bigger and cuter! 🌸✨
-                </p>
+                {/* <p className="text-pink-500 text-base">
+                  The "Yes" button is getting bigger and cuter! 🌷😘
+                </p> */}
               </motion.div>
             )}
           </motion.div>
         )}
 
-        {showCelebration && (
+        {showCelebration && !showProposal && (
           <motion.div
             key="celebration"
             initial={{ opacity: 0, scale: 0.5 }}
@@ -333,7 +333,7 @@ function App() {
                 }}
                 className="text-6xl md:text-8xl mb-4 text-center"
               >
-                💕💖💕
+                💕🎀💋
               </motion.div>
             
                           <motion.h1
@@ -342,7 +342,7 @@ function App() {
                 transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
                 className="text-5xl md:text-8xl font-bold text-pink-600 mb-4 drop-shadow-lg text-center"
               >
-                YES! 💍💖
+                YES! 💍💕
               </motion.h1>
               
               <motion.h2
@@ -360,7 +360,7 @@ function App() {
                 transition={{ delay: 0.9, type: "spring", stiffness: 200 }}
                 className="text-2xl md:text-3xl text-pink-500 font-semibold mb-8 text-center"
               >
-                💖 I love you BANGARAM, will be always yours 💖
+                💕 I love you BANGARAM, will be always yours 💋
               </motion.div>
             
             <motion.div
@@ -381,7 +381,7 @@ function App() {
                 }}
                 className="text-6xl md:text-8xl mb-4"
               >
-                🎉💕🎊
+                🎀💕🌷
               </motion.div>
               
               <motion.div
@@ -396,7 +396,7 @@ function App() {
                 }}
                 className="text-4xl md:text-6xl"
               >
-                💖💕💖💕💖
+                💋😘💕🎀🌷
               </motion.div>
             </motion.div>
           </motion.div>
